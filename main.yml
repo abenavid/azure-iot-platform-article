@@ -1,79 +1,83 @@
 ---
-- name: Create/Update Azure IoT Platform
-  hosts: localhost
+- hosts: localhost
+  connection: local
   gather_facts: false
-  become: true
-  tasks: 
-  - name: Create IoT Hub
-    azure.azcollection.azure_rm_iot_hub:
-      name: my-iot-hub
-      resource_group: my-resource-group
-      sku_tier: 'Free'
-      sku_capacity: 1
-  
-  - name: Create Device Registry
-    azure.azcollection.azure_rm_iothub_device:
-      name: my-device-registry
-      resource_group: my-resource-group
-      state: present
-  
-  - name: Create Storage Account
-    azure.azcollection.azure_rm_storageaccount:
-      name: my-storage-account
-      resource_group: my-resource-group
-      kind: StorageV2
-      sku_tier: Standard
-      sku_name: Standard_LRS
-  
-  - name: Create Data Lake Store
-    azure.azcollection.azure_rm_datalakestore_account:
-      name: my-data-lake
-      resource_group: my-resource-group
-  
-  - name: Create Input Source
-    azure.azcollection.azure_rm_streamanalyticsinput:
-      name: my-input-source
-      resource_group: my-resource-group
-      input_type: IoTHub
-      input_iothub_name: my-iot-hub
-      input_iothub_consumer_group: my-consumer-group
-  
-  - name: Create Output Sink
-    azure.azcollection.azure_rm_streamanalyticsoutput:
-      name: my-output-sink
-      resource_group: my-resource-group
-      output_type: PowerBI
-      output_powerbi_workspace: my-powerbi-workspace
-      output_powerbi_dataset: my-powerbi-dataset
-  
-  - name: Create Stream Analytics Job
-    azure.azcollection.azure_rm_streamanalyticsjob:
-      name: my-stream-analytics-job
-      resource_group: my-resource-group
-      inputs:
-        - my-input-source
-      outputs:
-        - my-output-sink
-      query: |
-        SELECT * INTO my-output-sink
-        FROM my-input-source
-  
-  - name: Create Azure Function
-    azure.azcollection.azure_rm_functionapp:
-      name: my-azure-function
-      resource_group: my-resource-group
-      runtime: dotnet
-      app_service_plan: my-app-service-plan
-  
-  - name: Deploy Azure Function Code
-    azure.azcollection.azure_rm_functionappdeployment:
-      name: my-azure-function
-      resource_group: my-resource-group
-      src_path: /path/to/function/code
-  
-  - name: Create Logic App
-    azure.azcollection.azure_rm_logicapp:
-      name: my-logic-app
-      resource_group: my-resource-group
-      state: present
-      definition: /path/to/logic-app/workflow.json
+  tasks:
+  - name: Create/Update Azure IoT Platform
+    hosts: localhost
+    gather_facts: false
+    become: true
+    tasks: 
+    - name: Create IoT Hub
+      azure.azcollection.azure_rm_iot_hub:
+        name: my-iot-hub
+        resource_group: my-resource-group
+        sku_tier: 'Free'
+        sku_capacity: 1
+    
+    - name: Create Device Registry
+      azure.azcollection.azure_rm_iothub_device:
+        name: my-device-registry
+        resource_group: my-resource-group
+        state: present
+    
+    - name: Create Storage Account
+      azure.azcollection.azure_rm_storageaccount:
+        name: my-storage-account
+        resource_group: my-resource-group
+        kind: StorageV2
+        sku_tier: Standard
+        sku_name: Standard_LRS
+    
+    - name: Create Data Lake Store
+      azure.azcollection.azure_rm_datalakestore_account:
+        name: my-data-lake
+        resource_group: my-resource-group
+    
+    - name: Create Input Source
+      azure.azcollection.azure_rm_streamanalyticsinput:
+        name: my-input-source
+        resource_group: my-resource-group
+        input_type: IoTHub
+        input_iothub_name: my-iot-hub
+        input_iothub_consumer_group: my-consumer-group
+    
+    - name: Create Output Sink
+      azure.azcollection.azure_rm_streamanalyticsoutput:
+        name: my-output-sink
+        resource_group: my-resource-group
+        output_type: PowerBI
+        output_powerbi_workspace: my-powerbi-workspace
+        output_powerbi_dataset: my-powerbi-dataset
+    
+    - name: Create Stream Analytics Job
+      azure.azcollection.azure_rm_streamanalyticsjob:
+        name: my-stream-analytics-job
+        resource_group: my-resource-group
+        inputs:
+          - my-input-source
+        outputs:
+          - my-output-sink
+        query: |
+          SELECT * INTO my-output-sink
+          FROM my-input-source
+    
+    - name: Create Azure Function
+      azure.azcollection.azure_rm_functionapp:
+        name: my-azure-function
+        resource_group: my-resource-group
+        runtime: dotnet
+        app_service_plan: my-app-service-plan
+    
+    - name: Deploy Azure Function Code
+      azure.azcollection.azure_rm_functionappdeployment:
+        name: my-azure-function
+        resource_group: my-resource-group
+        src_path: /path/to/function/code
+    
+    - name: Create Logic App
+      azure.azcollection.azure_rm_logicapp:
+        name: my-logic-app
+        resource_group: my-resource-group
+        state: present
+        definition: /path/to/logic-app/workflow.json
