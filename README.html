@@ -1,0 +1,488 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\abenavid\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="automating-iot-platform-deployment-on-azure-with-ansible">Automating IoT Platform Deployment on Azure with Ansible</h1>
+
+<p>In our modern world, IoT platforms are crucial for collecting, processing, and using data from different devices. Automation helps us make the deployment process easier and ensures things work in any environment. This article will show you how to use Ansible and Azure IoT Suite to automatically set up an IoT platform on Azure. By using code to define the platform&apos;s parts, you can control how everything is deployed.</p>
+<h2 class="mume-header" id="lets-explore-some-exciting-and-innovative-use-cases-that-you-can-achieve-by-automating-the-deployment-of-an-iot-platform-on-azure-using-ansible">Let&apos;s explore some exciting and innovative use cases that you can achieve by automating the deployment of an IoT platform on Azure using Ansible.</h2>
+
+<h3 class="mume-header" id="use-case-1-predictive-maintenance">Use Case 1: Predictive Maintenance</h3>
+
+<p>You can use automation to predict when your IoT devices might need maintenance. By using Azure Machine Learning with Ansible, you can train computer models to look at sensor data and find signs that equipment might break. Ansible can also set up Azure services like Azure Machine Learning Workspace and Azure Functions, which make it easier to put these predictive maintenance plans into action.</p>
+<h3 class="mume-header" id="use-case-2-intelligent-energy-management">Use Case 2: Intelligent Energy Management</h3>
+
+<p>By automating the setup of an IoT platform, you can make energy use more efficient in different places. With Azure IoT Suite and Ansible, you can automatically install smart sensors and devices that keep track of and manage how much energy is being used in buildings, factories, and even whole cities. Ansible makes it easy to set up these devices, collect data from sensors, analyze it right away, and take actions to save energy. This helps save money and is good for the environment too.</p>
+<h3 class="mume-header" id="use-case-3-real-time-inventory-management">Use Case 3: Real-time Inventory Management</h3>
+
+<p>When you use Azure IoT Suite and Ansible together, you can make a good inventory system that works in real-time. You can put IoT devices with special scanners, like RFID or barcode scanners, to keep track of things. Then, Azure Stream Analytics can automatically process the data and help you see where things are moving in your inventory. Ansible can help set up the devices, the computer stuff in the background, and the programs that process the data. This makes sure everything runs smoothly and you can manage your inventory easily, no matter how big it gets.</p>
+<h3 class="mume-header" id="use-case-4-smart-agriculture">Use Case 4: Smart Agriculture</h3>
+
+<p>Automating the setup of smart farming systems using IoT technology is a game-changer for agriculture. By using Azure IoT Suite and Ansible, you can install IoT devices that keep an eye on key things like soil moisture, temperature, humidity, and more. With Ansible, it&apos;s a breeze to create irrigation systems that use Azure Functions and Logic Apps to control how much water plants get based on the data collected by these devices. This clever automation makes sure crops get the right amount of water at the perfect time, resulting in better harvests and smarter use of resources.</p>
+<h3 class="mume-header" id="use-case-5-personalized-retail-experiences">Use Case 5: Personalized Retail Experiences</h3>
+
+<p>Automation and IoT have the power to change how we shop by creating personalized experiences. With Ansible and Azure IoT Suite, stores can use special devices to collect information about customers, like where they are, what they like, and how they shop. By utilizing Azure services like Azure Cosmos DB and Azure Logic Apps, you can analyze the data immediately and send customized special offers, suggestions, or messages to each customer. Ansible makes it easy to set up and manage these devices and services, so stores can give their customers one-of-a-kind shopping experiences that fit their tastes.</p>
+<h2 class="mume-header" id="getting-started">Getting Started</h2>
+
+<p>Now that we have explored these exciting use cases, let&apos;s move on to the practical steps involved in automating the deployment of an IoT platform on Azure using Ansible.</p>
+<h3 class="mume-header" id="prerequisites">Prerequisites</h3>
+
+<p>To follow along, you need to have the following:</p>
+<ul>
+<li>Azure subscription</li>
+<li>Azure Account. If you don&apos;t have one, get a <a href="https://azure.microsoft.com/free/">free one</a></li>
+<li>Generate service principal and expose them as environment variables or store them as a file</li>
+<li>Install Ansible</li>
+<li>Install Azure dependencies package ansible[azure]</li>
+<li>Install azure.azcollection into your execution environment</li>
+</ul>
+<p>Note: The code snippets use the Ansible modules from Microsoft&apos;s Azure collection. Within my git repo, you&apos;ll find custom roles I created which allows more flexibility when deploying these services.</p>
+<h3 class="mume-header" id="step-0-set-the-following-environment-variables">Step 0: Set The Following Environment Variables</h3>
+
+<pre data-role="codeBlock" data-info="plaintext" class="language-plaintext">AZURE_CLIENT_ID=&lt;service_principal_client_id&gt;
+AZURE_SECRET=&lt;service_principal_password&gt;
+AZURE_SUBSCRIPTION_ID=&lt;azure_subscription_id&gt;
+AZURE_TENANT=&lt;azure_tenant_id&gt;
+</pre><h3 class="mume-header" id="step-1-secure-device-endpoint-creation">Step 1: Secure Device Endpoint Creation</h3>
+
+<p>To establish secure endpoints for devices to connect to the cloud, the first step is to automate the creation of these endpoints using Ansible. Leveraging Azure&apos;s IoT Suite capabilities, you can define the necessary configurations and utilize Ansible&apos;s Azure modules to provision the required resources such as IoT hubs, device registries, and security mechanisms.</p>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create IoT Hub
+  <span class="token key atrule">azure.azcollection.azure_rm_iot_hub</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>iot<span class="token punctuation">-</span>hub
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">sku_tier</span><span class="token punctuation">:</span> <span class="token string">&apos;Free&apos;</span>
+    <span class="token key atrule">sku_capacity</span><span class="token punctuation">:</span> <span class="token number">1</span>
+
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Device Registry
+  <span class="token key atrule">azure.azcollection.azure_rm_iothub_device</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>device<span class="token punctuation">-</span>registry
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">state</span><span class="token punctuation">:</span> present
+</pre><h3 class="mume-header" id="step-2-data-aggregation-and-cleaning">Step 2: Data Aggregation and Cleaning</h3>
+
+<p>After successfully connecting the devices, the next step is to aggregate the data in the cloud. Ansible can automate the provisioning of Azure services such as storage accounts and data lakes, facilitating efficient collection of device data. Additionally, Ansible&#x2019;s flexibility allows you to incorporate data cleaning processes to ensure high-quality data for further analysis and processing.</p>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Storage Account
+  <span class="token key atrule">azure.azcollection.azure_rm_storageaccount</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>storage<span class="token punctuation">-</span>account
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">kind</span><span class="token punctuation">:</span> StorageV2
+    <span class="token key atrule">sku_tier</span><span class="token punctuation">:</span> Standard
+    <span class="token key atrule">sku_name</span><span class="token punctuation">:</span> Standard_LRS
+
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Data Lake Store
+  <span class="token key atrule">azure.azcollection.azure_rm_datalakestore_account</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>data<span class="token punctuation">-</span>lake
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+</pre><h3 class="mume-header" id="3-routing-data-to-azure-stream-analytics">3: Routing Data to Azure Stream Analytics</h3>
+
+<p>To perform real-time analytics on the IoT data, the deployment and configuration of Stream Analytics jobs using Azure Stream Analytics is essential. Ansible allows you to automate this process by defining input sources, output sinks, and query logic for the Stream Analytics job.</p>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Input Source
+  <span class="token key atrule">azure.azcollection.azure_rm_streamanalyticsinput</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>input<span class="token punctuation">-</span>source
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">input_type</span><span class="token punctuation">:</span> IoTHub
+    <span class="token key atrule">input_iothub_name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>iot<span class="token punctuation">-</span>hub
+    <span class="token key atrule">input_iothub_consumer_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>consumer<span class="token punctuation">-</span>group
+
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Output Sink
+  <span class="token key atrule">azure.azcollection.azure_rm_streamanalyticsoutput</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>output<span class="token punctuation">-</span>sink
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">output_type</span><span class="token punctuation">:</span> PowerBI
+    <span class="token key atrule">output_powerbi_workspace</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>powerbi<span class="token punctuation">-</span>workspace
+    <span class="token key atrule">output_powerbi_dataset</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>powerbi<span class="token punctuation">-</span>dataset
+
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Stream Analytics Job
+  <span class="token key atrule">azure.azcollection.azure_rm_streamanalyticsjob</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>stream<span class="token punctuation">-</span>analytics<span class="token punctuation">-</span>job
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">inputs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> my<span class="token punctuation">-</span>input<span class="token punctuation">-</span>source
+    <span class="token key atrule">outputs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> my<span class="token punctuation">-</span>output<span class="token punctuation">-</span>sink
+    <span class="token key atrule">query</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+      SELECT * INTO my-output-sink
+      FROM my-input-source</span>
+</pre><h3 class="mume-header" id="step-4-data-processing-and-action">Step 4: Data Processing and Action</h3>
+
+<p>Once data starts coming into Azure Stream Analytics, you can use it to make smart decisions and take action. Ansible can help you set up and control other Azure services, like Azure Functions or Azure Logic Apps, which will process the data and send alerts or notifications when needed.</p>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Azure Function
+  <span class="token key atrule">azure.azcollection.azure_rm_functionapp</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>azure<span class="token punctuation">-</span>function
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">runtime</span><span class="token punctuation">:</span> dotnet
+    <span class="token key atrule">app_service_plan</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>app<span class="token punctuation">-</span>service<span class="token punctuation">-</span>plan
+
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy Azure Function Code
+  <span class="token key atrule">azure.azcollection.azure_rm_functionappdeployment</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>azure<span class="token punctuation">-</span>function
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">src_path</span><span class="token punctuation">:</span> /path/to/function/code
+
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Logic App
+  <span class="token key atrule">azure.azcollection.azure_rm_logicapp</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>logic<span class="token punctuation">-</span>app
+    <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+    <span class="token key atrule">state</span><span class="token punctuation">:</span> present
+    <span class="token key atrule">definition</span><span class="token punctuation">:</span> /path/to/logic<span class="token punctuation">-</span>app/workflow.json
+</pre><p>By following these steps and leveraging the automation capabilities of Ansible, you can seamlessly deploy and configure an IoT platform on Azure. The provided code snippets demonstrate how Ansible can streamline the deployment process and enable you to achieve your automation goals effectively.</p>
+<h3 class="mume-header" id="recap">Recap:</h3>
+
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">---</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create/Update Azure IoT Platform
+  <span class="token key atrule">hosts</span><span class="token punctuation">:</span> localhost
+  <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">tasks</span><span class="token punctuation">:</span> 
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create IoT Hub
+    <span class="token key atrule">azure.azcollection.azure_rm_iot_hub</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>iot<span class="token punctuation">-</span>hub
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">sku_tier</span><span class="token punctuation">:</span> <span class="token string">&apos;Free&apos;</span>
+      <span class="token key atrule">sku_capacity</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Device Registry
+    <span class="token key atrule">azure.azcollection.azure_rm_iothub_device</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>device<span class="token punctuation">-</span>registry
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> present
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Storage Account
+    <span class="token key atrule">azure.azcollection.azure_rm_storageaccount</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>storage<span class="token punctuation">-</span>account
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">kind</span><span class="token punctuation">:</span> StorageV2
+      <span class="token key atrule">sku_tier</span><span class="token punctuation">:</span> Standard
+      <span class="token key atrule">sku_name</span><span class="token punctuation">:</span> Standard_LRS
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Data Lake Store
+    <span class="token key atrule">azure.azcollection.azure_rm_datalakestore_account</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>data<span class="token punctuation">-</span>lake
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Input Source
+    <span class="token key atrule">azure.azcollection.azure_rm_streamanalyticsinput</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>input<span class="token punctuation">-</span>source
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">input_type</span><span class="token punctuation">:</span> IoTHub
+      <span class="token key atrule">input_iothub_name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>iot<span class="token punctuation">-</span>hub
+      <span class="token key atrule">input_iothub_consumer_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>consumer<span class="token punctuation">-</span>group
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Output Sink
+    <span class="token key atrule">azure.azcollection.azure_rm_streamanalyticsoutput</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>output<span class="token punctuation">-</span>sink
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">output_type</span><span class="token punctuation">:</span> PowerBI
+      <span class="token key atrule">output_powerbi_workspace</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>powerbi<span class="token punctuation">-</span>workspace
+      <span class="token key atrule">output_powerbi_dataset</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>powerbi<span class="token punctuation">-</span>dataset
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Stream Analytics Job
+    <span class="token key atrule">azure.azcollection.azure_rm_streamanalyticsjob</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>stream<span class="token punctuation">-</span>analytics<span class="token punctuation">-</span>job
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">inputs</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> my<span class="token punctuation">-</span>input<span class="token punctuation">-</span>source
+      <span class="token key atrule">outputs</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> my<span class="token punctuation">-</span>output<span class="token punctuation">-</span>sink
+      <span class="token key atrule">query</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        SELECT * INTO my-output-sink
+        FROM my-input-source</span>
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Azure Function
+    <span class="token key atrule">azure.azcollection.azure_rm_functionapp</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>azure<span class="token punctuation">-</span>function
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">runtime</span><span class="token punctuation">:</span> dotnet
+      <span class="token key atrule">app_service_plan</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>app<span class="token punctuation">-</span>service<span class="token punctuation">-</span>plan
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy Azure Function Code
+    <span class="token key atrule">azure.azcollection.azure_rm_functionappdeployment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>azure<span class="token punctuation">-</span>function
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">src_path</span><span class="token punctuation">:</span> /path/to/function/code
+  
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create Logic App
+    <span class="token key atrule">azure.azcollection.azure_rm_logicapp</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>logic<span class="token punctuation">-</span>app
+      <span class="token key atrule">resource_group</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>resource<span class="token punctuation">-</span>group
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> present
+      <span class="token key atrule">definition</span><span class="token punctuation">:</span> /path/to/logic<span class="token punctuation">-</span>app/workflow.json
+</pre><p>In conclusion, automating the deployment of IoT platforms on Azure using Ansible brings many exciting possibilities. It helps businesses with things like predictive maintenance, saving energy, managing inventory in real-time, and improving farming practices. By using automation and IoT, companies can make their operations better, be more productive, and provide personalized experiences to customers. With Ansible and Azure, it&#x2019;s easier for organizations to deploy IoT platforms and benefit from their powerful features. This automation-driven approach leads to a future where technology connects us better, making our lives smarter and more efficient.</p>
+<h3 class="mume-header" id="references">References</h3>
+
+<p><a href="https://docs.ansible.com/ansible/latest/collections/azure/azcollection/index.html">https://docs.ansible.com/ansible/latest/collections/azure/azcollection/index.html</a><br>
+<a href="https://galaxy.ansible.com/azure/azcollection">https://galaxy.ansible.com/azure/azcollection</a><br>
+<a href="https://github.com/Azure-Samples/ansible-playbooks/tree/master">https://github.com/Azure-Samples/ansible-playbooks/tree/master</a><br>
+<a href="https://github.com/abenavid/azure-iot-platform">https://github.com/abenavid/azure-iot-platform</a></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

@@ -2,7 +2,7 @@
 
 In our modern world, IoT platforms are crucial for collecting, processing, and using data from different devices. Automation helps us make the deployment process easier and ensures things work in any environment. This article will show you how to use Ansible and Azure IoT Suite to automatically set up an IoT platform on Azure. By using code to define the platform's parts, you can control how everything is deployed.
 
-## Let's explore some exciting and innovative use cases that you can achieve by automating the deployment of an IoT platform on Azure using Ansible.
+### Let's explore some exciting and innovative use cases that you can achieve by automating the deployment of an IoT platform on Azure using Ansible.
 
 ### Use Case 1: Predictive Maintenance
 
